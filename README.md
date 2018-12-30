@@ -3,10 +3,10 @@
 :heavy_minus_sign: Jinja2 Code, list to Jinja div\
 :heavy_check_mark: CSS\
 :heavy_minus_sign: Heroku Push\
-:heavy_minus_sign: More formatting [maybe this?]\(https://help.github.com/articles/basic-writing-and-formatting-syntax/)\
+:heavy_minus_sign: More formatting [maybe this?](https://help.github.com/articles/basic-writing-and-formatting-syntax/)\
 :heavy_minus_sign: More comments\
 :heavy_minus_sign: Clean CSS\
-:heavy_minus_sign: Sleep\
+:heavy_minus_sign: Sleep
 
 #### **Current Issues**
 
