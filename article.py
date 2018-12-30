@@ -6,6 +6,7 @@ class Blog:
 	staticPath = 'static/'
 	articlePath = 'static/articles/'
 
+
 	def __init__(self):
 		# FontAwesome
 		self.footerIconSize = 'fa-3x'
