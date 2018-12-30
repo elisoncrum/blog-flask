@@ -4,9 +4,9 @@ https://github.com/elisoncrum/blog and elisoncrum.github.io/blog
 
 I am trying to make it a medium level blog engine for people who are used to Reddit and Discords markdown it will take something like
 ```
-\`\`\`h1
+```h1
 this is a header
-\`\`\`
+```
 
 and turn it into
 
