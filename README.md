@@ -17,16 +17,16 @@
 
 Turn something like this
 ````
-    ```h1
-    more stuff
-    **bolded stuff**
-    ```
+```h1
+more stuff
+**bolded stuff**
+```
 ````
 
 into
 ```html
-    <h1>more stuff</h1>
-    <strong>bolded stuff</strong>
+<h1>more stuff</h1>
+<strong>bolded stuff</strong>
 ``` 
 
 ### **Old Program**
