@@ -20,7 +20,7 @@ data = {
 	]
 }
 
-article = open('1.article', 'r')
+article = open('static/articles/1.article', 'r')
 
 reTagPattern = '```(\w*)\n([\s\S]*?)```'
 reResult = re.findall(reTagPattern, article.read(), re.MULTILINE)
