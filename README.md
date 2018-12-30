@@ -16,18 +16,18 @@
 > Goal of this program is to make creating blog really simple, mainly for individuals who used to Reddit and Discord markdown.
 
 Turn something like this
-
+````
     ```h1
     more stuff
     **bolded stuff**
     ```
-    
+````
 
 into
-
+```html
     <h1>more stuff</h1>
     <strong>bolded stuff</strong>
-    
+``` 
 
 ### **Old Program**
 
