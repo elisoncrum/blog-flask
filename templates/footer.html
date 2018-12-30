@@ -2,9 +2,9 @@
 	<section class="navbar">
 		<div class="container">
 			<div class="box">
-				{% for icon, href in blog.footerIcons %}
-					<a class="no-shadow" href="{{href}}">
-						<i class="{{icon}} {{blog.footerIconSize}} social"></i>
+				{% for item in blog.footerIcons %}
+					<a class="no-shadow" href="{{item['href']}}" id="{{item['id']}}">
+						<i class="{{item['class']}} {{blog.footerIconSize}} social"></i>
 					</a>
 				{% endfor %}
 			</div>

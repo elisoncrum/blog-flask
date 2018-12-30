@@ -6,17 +6,29 @@ class Blog:
 	staticPath = 'static/'
 	articlePath = 'static/articles/'
 
-
 	def __init__(self):
 		# FontAwesome
 		
 		self.footerIconSize = 'fa-3x'
-		self.footerIcons = [
-			['fab fa-github', 'https://github.com/elisoncrum'], 
-			['fab fa-instagram', 'https://www.instagram.com/elison.hike/'], 
-			['far fa-envelope', 'mailto:#elisoncrum@gmail.com'], 
-			['fas fa-cog', '#']]
+		self.footerIcons = [{
+				'class': 'fab fa-github', 
+				'href': 'https://github.com/elisoncrum', 
+				'id': 'social-git'}, {
+
+				'class': 'fab fa-instagram', 
+				'href': 'https://www.instagram.com/elison.hike/',
+				'id': 'social-insta'}, {
+
+				'class': 'far fa-envelope', 
+				'href': 'mailto:#elisoncrum@gmail.com',
+				'id': 'social-mail'}, {
+
+				'class': 'fas fa-cog',
+				'href': '#',
+				'id': 'social-cog'
+				}]
 	
+
 	def openArticles(self):
 		files = os.listdir(Blog.articlePath)
 		self.articles = [self.convertArticles(article) for article in files]
@@ -28,7 +40,7 @@ class Blog:
 		reSearchLink = r'!\(([\s\S]*?)\)\[([\s\S]*?)\]'
 		reLinkReplace = r'<a href="\2">\1</a>'
 		reSearchText = r'{0}([\s\S]*?){0}'
-		textFormat = [r'<i>\1</i>', r'<strong>\1</strong>', r'<strong><i>\1</i><strong>']
+		textFormat = [r'<i>\1</i>', r'<strong>\1</strong>', r'<strong><i>\1</i></strong>']
 
 		raw = re.sub(reSearchLink, reLinkReplace, raw)
 		for i in range(3, 0, -1):
@@ -66,7 +78,7 @@ class Blog:
 			elif reElem:
 				content = reResult[iterResult][1]
 				content = self.markup(content)
-				articleData['content'].append(('elem', reElem.group(1), reResult[iterResult][1]))
+				articleData['content'].append(('elem', reElem.group(1), content))
 				iterResult += 1
 
 			elif reCommand:
@@ -76,8 +88,4 @@ class Blog:
 					articleData['content'].append(('img', reCommand.group(2), reCommand.group(1)))
 				
 			index += 1
-		
 		return articleData
-
-blog = Blog()
-blog.openArticles()

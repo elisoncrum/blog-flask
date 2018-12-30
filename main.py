@@ -3,9 +3,10 @@ from flask import Flask, render_template, send_from_directory
 from article import Blog
 
 blog = Blog()
+blog.openArticles()
+print(blog.articles)
 
 app = Flask('app')
-
 
 @app.route('/static/css<path:path>')
 def send_js(path):
@@ -15,7 +16,7 @@ def send_js(path):
 def home():
 	return render_template('main.html',
 						blog = blog,
-						file_list = os.listdir('static/css')
+						css_file_list = os.listdir('static/css')
 					)
 
 @app.route('/favicon.ico')

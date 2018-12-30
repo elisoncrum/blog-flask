@@ -9,16 +9,25 @@
 		
 		<link rel="stylesheet" href="{{ url_for('static', filename='normalize.css') }}">
 		<link rel="stylesheet" href="{{ url_for('static', filename='reset.css') }}">
-		{% for css_file in file_list %}
+		{% for css_file in css_file_list %}
 			<link rel="stylesheet" href="{{ url_for('static', filename='css/'+css_file) }}">
 		{% endfor %}
 	</head>
 	<body>
-		<article>
-			<h1>
-				this is a test
-			</h1>
+		{% for article in blog.articles %}
+		<article id="{{article['title']}}">
+			<time id="{{article['date'][0]}}">
+				<a class="no-shadow" href="#{{article['date'][0]}}">{{article['date'][1]}}</a>
+			</time>
+
+			{% for item in article['content'] %}
+				{% if item[0] == 'elem' %}
+					<{{item[1]}}>{{item[2]}}</{{item[1]}}>
+				{% endif %}
+			{% endfor %}
 		</article>
+		{% endfor %}
+
 		{% include 'footer.html' %}
 	</body>
 </html>
