@@ -1,6 +1,8 @@
 ### **Current Work**
-   [X] Correct Data output
-   []
+[X] Correct Data output from article.py
+[ ] Data -> Jinja2
+[ ] CSS Implemented
+[ ] Heroku Push
 
 ### **Old Reference Site**
 #####  [https://elisoncrum.github.io/blog](https://elisoncrum.github.io/blog)
