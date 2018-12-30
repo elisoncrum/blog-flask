@@ -30,7 +30,7 @@ more stuff
 </blockquote>
 <blockquote>
 <ul>
-<li><a href="https://github.com/elisoncrum/blog-flask/blob/master/main.py">article.py</a></li>
+<li><a href="https://github.com/elisoncrum/blog-flask/blob/master/article.py">article.py</a></li>
 <li><a href="http://jinja.pocoo.org/docs/2.10/">Jinja2</a></li>
 <li><a href="http://flask.pocoo.org/docs/1.0/">Flask</a></li>
 </ul>
