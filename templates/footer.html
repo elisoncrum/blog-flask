@@ -1,0 +1,13 @@
+<footer>
+	<section class="navbar">
+		<div class="container">
+			<div class="box">
+				{% for icon, href in blog.footerIcons %}
+					<a class="no-shadow" href="{{href}}">
+						<i class="{{icon}} {{blog.footerIconSize}} social"></i>
+					</a>
+				{% endfor %}
+			</div>
+		</div>
+	</section>
+</footer>
