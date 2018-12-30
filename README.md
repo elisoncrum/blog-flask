@@ -3,6 +3,10 @@
 - [ ] Jinja2 Code, list to Jinja div
 - [X] CSS Implemented
 - [ ] Heroku Push
+- [ ] More formatting [maybe this?](https://help.github.com/articles/basic-writing-and-formatting-syntax/)
+- [ ] More comments
+- [ ] Clean CSS
+- [ ] Sleep
 
 ### **Old Reference Site**
 #####  [https://elisoncrum.github.io/blog](https://elisoncrum.github.io/blog)
