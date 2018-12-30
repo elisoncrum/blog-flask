@@ -9,6 +9,7 @@ class Blog:
 
 	def __init__(self):
 		# FontAwesome
+		
 		self.footerIconSize = 'fa-3x'
 		self.footerIcons = [
 			['fab fa-github', 'https://github.com/elisoncrum'], 

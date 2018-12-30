@@ -1,7 +1,7 @@
 ### **Current Work**
 - [X] Correct Data output from article.py
 - [ ] Jinja2 Code, list to Jinja div
-- [ ] CSS Implemented
+- [X] CSS Implemented
 - [ ] Heroku Push
 
 ### **Old Reference Site**
