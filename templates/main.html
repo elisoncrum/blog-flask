@@ -22,7 +22,7 @@
 
 			{% for item in article['content'] %}
 				{% if item[0] == 'elem' %}
-					<{{item[1]}}>{{item[2]}}</{{item[1]}}>
+					<{{ item[1]|safe }}>{{ item[2]|safe }}</{{ item[1]|safe }}>
 				{% endif %}
 			{% endfor %}
 		</article>
