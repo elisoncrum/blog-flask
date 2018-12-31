@@ -23,4 +23,4 @@ def home():
 def favicon():
     return send_from_directory(os.path.join(app.root_path, 'static'), 'favicon.png')
 
-app.run(host='0.0.0.0', debug=True)
+app.run(host='0.0.0.0', port=80)
