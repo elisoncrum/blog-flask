@@ -11,7 +11,7 @@ app = Flask('app')
 def send_js(path):
     return send_from_directory('static/css', path)
 
-@app.route('/')
+@app.route('/', methods=['GET'])
 def home():
 	return render_template('main.html',
 						blog = blog,
@@ -22,4 +22,7 @@ def home():
 def favicon():
     return send_from_directory(os.path.join(app.root_path, 'static'), 'favicon.png')
 
-app.run(host='0.0.0.0', port=80)
+app.run(host=os.getenv('IP', '0.0.0.0'), port = int(os.getenv('PORT', 8080)))
+
+if __name__ == '__main__':
+	app.run(debug=False)
