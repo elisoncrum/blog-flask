@@ -4,8 +4,10 @@ from article import Blog
 
 blog = Blog()
 blog.openArticles()
+app = Flask(__name__)
 
-app = Flask('app')
+app.jinja_env.trim_blocks = True
+app.jinja_env.lstrip_blocks = True
 
 @app.route('/static/css<path:path>')
 def send_js(path):
@@ -23,6 +25,6 @@ def favicon():
     return send_from_directory(os.path.join(app.root_path, 'static'), 'favicon.png')
 
 app.run(host=os.getenv('IP', '0.0.0.0'), port = int(os.getenv('PORT', 8080)))
-
+print('Running on {}:{}'.format(os.getenv('IP', '0.0.0.0'), port = int(os.getenv('PORT', 8080)))
 if __name__ == '__main__':
-	app.run(debug=False)
+	app.run()
