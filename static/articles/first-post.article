@@ -11,7 +11,7 @@ As you probably don't know, my name is Elison. I am a programmer and an outdoors
 If you are a programmer you can check out the JS !(here.)[article.js] If you notice the articles are written in a custom markup language I made, influence by Discords inline formatting and Reddit. If you also noticed, this is a backpacking blog
 not another shitty coding blog of mediocre code.
 ```
-!(Colorado Trail 2016 Trip,second image)[images/colorado-trail.jpg,images/colorado-trail.jpg]
+!(Colorado Trail 2016 Trip|Headed into the storm)[static/images/colorado-trail.jpg|static/images/colorado-trail-view.jpg]
 ```h3
 Colorado Trail Trip with Troop 400
 ```
@@ -22,3 +22,4 @@ Above was a picture I took on a trip on the Colorado Trail. I was lucky enough t
 Since I was the leader I needed to delegate things that needed to be done. Demanding that things get done this way was not the way to go.
 Since then I took the NYLT Course at Bighorn and learned a lot about myself and how to lead.
 ```
+!(Colorado Trail 2016 Trip|Headed into the storm)[static/images/colorado-trail.jpg|static/images/colorado-trail-view.jpg]

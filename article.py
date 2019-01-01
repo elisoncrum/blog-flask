@@ -3,6 +3,7 @@ import os
 from datetime import datetime
 
 class Blog:
+	title = "Elisons Backpacking Blog"
 	staticPath = 'static/'
 	articlePath = 'static/articles/'
 
@@ -63,7 +64,7 @@ class Blog:
 
 		index = 0
 		iterResult = 0
-
+		carouselIndex = 1
 		for line in article.readlines():
 			line = line.strip()
 
@@ -83,7 +84,9 @@ class Blog:
 
 			elif reCommand:
 				if '|' in reCommand.group(0):
-					articleData['content'].append(('sldshw', reCommand.group(2).split('|'), reCommand.group(1).split('|')))
+					sldshwData = list(zip(reCommand.group(2).split('|'), reCommand.group(1).split('|')))
+					articleData['content'].append(('sldshw', carouselIndex, sldshwData))
+					carouselIndex += 1
 				else:
 					articleData['content'].append(('img', reCommand.group(2), reCommand.group(1)))
 				

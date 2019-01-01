@@ -4,7 +4,6 @@ from article import Blog
 
 blog = Blog()
 blog.openArticles()
-print(blog.articles)
 
 app = Flask('app')
 
