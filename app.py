@@ -25,6 +25,6 @@ def favicon():
     return send_from_directory(os.path.join(app.root_path, 'static'), 'favicon.png')
 
 app.run(host=os.getenv('IP', '0.0.0.0'), port = int(os.getenv('PORT', 8080)))
-print('Running on {}:{}'.format(os.getenv('IP', '0.0.0.0'), port = int(os.getenv('PORT', 8080)))
+print('Running on {}:{}'.format(os.getenv('IP', '0.0.0.0'), port = int(os.getenv('PORT', 8080))))
 if __name__ == '__main__':
 	app.run()
