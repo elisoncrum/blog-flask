@@ -4,20 +4,31 @@ from article import Blog
 
 blog = Blog()
 blog.openArticles()
+blog.sortArticles()
+
 app = Flask(__name__)
 
 app.jinja_env.trim_blocks = True
 app.jinja_env.lstrip_blocks = True
 
-@app.route('/static/css<path:path>')
-def send_js(path):
-    return send_from_directory('static/css', path)
+@app.route('/css/<path:filename>')
+def css(filename):
+    return send_from_directory('static/css/', filename)
+
+@app.route('/js/<path:filename>')
+def js(filename):
+	return send_from_directory('static/js', filename)
+
+@app.route('/images/<path:filename>')
+def images(filename):
+    return send_from_directory('static/images/', filename)
 
 @app.route('/', methods=['GET'])
 def home():
-	return render_template('main.html',
+	return render_template('blog.html',
 						blog = blog,
-						css_file_list = os.listdir('static/css')
+						css_file_list = os.listdir('static/css'),
+						js_file_list = os.listdir('static/js')
 					)
 
 @app.route('/favicon.ico')
@@ -27,4 +38,4 @@ def favicon():
 app.run(host=os.getenv('IP', '0.0.0.0'), port = int(os.getenv('PORT', 8080)))
 print('Running on {}:{}'.format(os.getenv('IP', '0.0.0.0'), port = int(os.getenv('PORT', 8080))))
 if __name__ == '__main__':
-	app.run()
+	app.run(debug=True)

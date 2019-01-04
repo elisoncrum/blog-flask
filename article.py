@@ -35,7 +35,7 @@ class Blog:
 		self.articles = [self.convertArticles(article) for article in files]
 
 	def sortArticles(self):
-		pass
+		self.articles = sorted(self.articles, key=lambda x: datetime.strptime(x['date'][0], '%m-%d-%y'), reverse = False)
 
 	def markup(self, raw):
 		reSearchLink = r'!\(([\s\S]*?)\)\[([\s\S]*?)\]'
@@ -74,7 +74,7 @@ class Blog:
 				articleData['title'] = line
 			elif index == 1:
 				date = datetime.strptime(line, '%m-%d-%y')
-				articleData['date'] = [line, date.strftime('%b %d, %Y').replace(' 0', ' ')]
+				articleData['date'] = [line, date.strftime('%B %d, %Y').replace(' 0', ' ')]
 			
 			elif reElem:
 				content = reResult[iterResult][1]

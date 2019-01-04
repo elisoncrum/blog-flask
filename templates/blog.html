@@ -1,0 +1,11 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+	{% with blog=blog %}
+		{% include 'article.html' %}
+	{% endwith %}
+{% endblock %}
+
+{% block footer %}
+	{% include 'footer.html' %}
+{% endblock %}
