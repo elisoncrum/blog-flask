@@ -11,7 +11,7 @@
 .container {
     justify-content: center !important;
     padding-right: 30px;
-}
+}test
 
 @media only screen and (max-device-width : 640px) {
     .navbar a {
