@@ -8,7 +8,7 @@
 				<{{ item[1]|safe }}>{{ item[2]|safe }}</{{ item[1]|safe }}>
 
 			{% elif item[0] == 'sldshw' %}
-				<figure class="size-3">
+				<figure class="size-2">
 					<div id="{{ article['title'] }}_carousel_{{ item[1] }}" class="carousel slide" data-interval="false" data-ride="carousel">
 						<div class="carousel-inner">
 							{% for img_path, img_title in item[2] %}
@@ -36,7 +36,7 @@
 				</figure>
 
 			{% elif item[0] == 'img' %}
-				<figure class="size-3 w-100">
+				<figure class="size-2 w-100">
 					<img src="{{ url_for('images', filename=item[1]) }}">
 				</figure>
 			{% endif %}

@@ -25,7 +25,7 @@ def images(filename):
 
 @app.route('/', methods=['GET'])
 def home():
-	return render_template('index.html',
+	return render_template('main.html',
 						blog = blog,
 						css_file_list = os.listdir('static/css'),
 						js_file_list = os.listdir('static/js')
@@ -35,6 +35,13 @@ def home():
 def favicon():
     return send_from_directory(os.path.join(app.root_path, 'static'), 'favicon.png')
 
+@app.after_request
+def set_response_headers(response):
+	response.headers['Cache-Control'] = 'no-cache, no-store, must-revalidate'
+	response.headers['Pragma'] = 'no-cache'
+	response.headers['Expires'] = '0'
+	return response
+
 app.run(host=os.getenv('IP', '0.0.0.0'), port = int(os.getenv('PORT', 8080)))
 if __name__ == '__main__':
-	app.run(debug=True)
+	app.run(debug=False)
