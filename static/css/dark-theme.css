@@ -40,3 +40,8 @@ figure {
 	margin: unset !important;
     margin-bottom: unset;
 }
+
+.topnav {
+	background-image: url('../images/topo.png');
+	color: black;
+}
